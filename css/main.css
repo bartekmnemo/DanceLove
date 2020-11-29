@@ -1,0 +1,158 @@
+body
+{
+	/* Background pattern from Subtle Patterns */
+	background-image: url('../img/shattered/shattered_@2X.png');
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header.headerTop
+{
+	background-color: white;
+	box-shadow: 0 0 2em -1em rgba(0,0,0,0.75);
+}
+
+#row
+{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55em;
+    min-height: 3em;
+	padding: 0.5em 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; 
+}
+
+
+#logo
+{
+    text-align: center;
+    width: 10em;
+	float: left;
+	cursor: pointer;
+}
+
+.items
+{
+    float: right;
+    padding: 0 0.5em 0 0.5em;
+    margin-right: 1em;
+}
+
+.items:hover
+{
+    text-decoration: underline;
+    text-decoration-color: orange;
+    cursor: pointer;
+}
+
+#itemsReg
+{
+    float: right;
+    padding: 0 0.5em 0 0.5em;
+    margin-right: 1em;
+    min-width: 5em;
+    background-color:#ffa500;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 1em;
+}
+
+#itemsReg:hover
+{
+    background-color: #ee9400;
+    cursor: pointer;
+}
+
+h1.top
+{
+	font-size: 24px;
+	
+}
+
+.LogoIt
+{
+	color: #ffa500;
+    font-size: 28px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+h1
+{
+	text-align: center;
+	font-weight: 300;
+	font-size: 68px;
+	color: #555;
+	margin:0;
+	padding:0;
+}
+
+
+
+#content
+{
+	width: 35em;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 24px;
+	padding: 40px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	min-height: 500px;
+}
+
+#contentButton
+{
+	text-align: center;
+}
+
+.orangebutton
+{
+	color: white;
+	font-size: 24px;
+	padding: 15px;
+	background-color: #ffa500;
+	text-decoration: none;
+	border-radius: 1em;
+}
+
+.orangebutton:hover
+{
+	background-color: #ee9400;
+	font-size: 26px;
+}
+
+#logo a
+{
+	text-decoration: none;
+}
+
+.info
+{
+	margin-bottom: 60px;
+}
+
+section
+{
+	background: white;
+	box-shadow: 0px 0px 50px -10px rgba(0,0,0,0.75);
+}
+
+
+#bottom
+{
+	color: #555;
+	padding: 15px;
+	text-align: center;
+	font-size: 28px;
+    position: relative;
+}
+
+
+/* ------------------------------------------------------------*/
