@@ -1,37 +1,42 @@
 body
 {
+	margin: 0;
+	padding: 0;
 	/* Background pattern from Subtle Patterns */
 	background-image: url('../img/shattered/shattered_@2X.png');
 	font-family: 'Open Sans Condensed', sans-serif;
-	margin: 0;
-	padding: 0;
 }
 
-header.headerTop
+/* .page-wrapper {
+	
+} */
+
+.headerTop
 {
+	display: flex;
+	justify-content: center;
+	padding: 1em;
 	background-color: white;
 	box-shadow: 0 0 2em -1em rgba(0,0,0,0.75);
 }
 
-#row
-{
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+.header-content-wrapper {
 	width: 55em;
-    min-height: 3em;
-	padding: 0.5em 0;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 50px; 
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
 }
 
+.nav
+{
+    min-height: 3em;
+    text-align: center;
+    line-height: 50px;
+}
 
-#logo
+.logo
 {
     text-align: center;
-    width: 10em;
-	float: left;
 	cursor: pointer;
 }
 
@@ -68,11 +73,7 @@ header.headerTop
     cursor: pointer;
 }
 
-h1.top
-{
-	font-size: 24px;
-	
-}
+
 
 .LogoIt
 {
@@ -86,20 +87,17 @@ h1
 {
 	text-align: center;
 	font-weight: 300;
-	font-size: 68px;
+	font-size: 24px;
 	color: #555;
 	margin:0;
 	padding:0;
 }
 
-
-
 #content
 {
 	width: 35em;
 	text-align: justify;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	font-size: 24px;
 	padding: 40px;
 	margin-top: 15px;
@@ -128,7 +126,7 @@ h1
 	font-size: 26px;
 }
 
-#logo a
+.logo a
 {
 	text-decoration: none;
 }
@@ -145,13 +143,12 @@ section
 }
 
 
-#bottom
+.bottom
 {
 	color: #555;
 	padding: 15px;
 	text-align: center;
 	font-size: 28px;
-    position: relative;
 }
 
 
