@@ -73,8 +73,6 @@ body
     cursor: pointer;
 }
 
-
-
 .LogoIt
 {
 	color: #ffa500;
@@ -93,13 +91,17 @@ h1
 	padding:0;
 }
 
+.article {
+	width: 55em;
+	margin: auto;
+}
+
 #content
 {
-	width: 35em;
 	text-align: justify;
 	margin: auto;
 	font-size: 24px;
-	padding: 40px;
+	padding: 40px 0 40px 0;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	min-height: 500px;
