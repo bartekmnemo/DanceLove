@@ -8,6 +8,7 @@ body {
 
 ::selection {
     background: #ffa500;
+	color:white;
     text-shadow: none;
 }
 
