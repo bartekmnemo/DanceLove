@@ -102,7 +102,7 @@ h1 {
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: 0.9s ease-out;
+    transition: 2s ease-out;
     user-select: none;
 }
 
@@ -221,5 +221,23 @@ ul li
 ul li::before
 {
     content: '✓ ';
-    color: #3f3f3f;
+    color: #ffa500;
+}
+
+.danceText
+{
+    box-sizing: border-box;
+    background: linear-gradient(to right, #3f3f3f 50%, #ff4000 50%, #ffa500);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    transition: 2s ease-out;
+    user-select: none;
+    cursor: pointer;
+}
+
+.danceText:hover
+{
+    background-position:-100%; 
 }
