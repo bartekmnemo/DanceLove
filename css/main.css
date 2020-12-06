@@ -12,6 +12,12 @@ body {
     text-shadow: none;
 }
 
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
 .page-wrapper {
 	
 }
@@ -46,18 +52,25 @@ body {
 }
 
 .items {
+    font-weight: bold;
+    color:#3f3f3f;
     float: right;
     padding: 0 0.5em 0 0.5em;
+    border-radius: 1em; 
+    transition: 0.5s;
     margin-right: 1em;
 }
 
 .items:hover {
-    text-decoration: underline;
     text-decoration-color: orange;
+    background-color: #ffa500;
+    border-radius: 1em;
+    color: white;
     cursor: pointer;
 }
 
 #itemsReg {
+    border: 1px solid #ffa500;
     float: right;
     padding: 0 0.5em 0 0.5em;
     margin-right: 1em;
@@ -65,12 +78,14 @@ body {
     background-color:#ffa500;
     color:white;
     text-transform: uppercase;
+    transition: 0.5s;
     font-weight: 600;
     border-radius: 1em;
 }
 
 #itemsReg:hover {
-    background-color: #ee9400;
+    background: none;
+    color: #3f3f3f;
     cursor: pointer;
 }
 
@@ -130,7 +145,7 @@ main {
 }
 
 .contentButton {
-    
+    color: white;
     text-align: center;
 }
 
@@ -197,7 +212,7 @@ section {
 }
 
 .bottom {
-	color: #555;
+	color: #3f3f3f;
 	padding: 15px;
 	text-align: center;
 	font-size: 28px;
