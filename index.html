@@ -7,6 +7,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="Projekt, WSB">
 	<meta name="author" content="Bartek Zięcina">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
 	
     <script src="js/scripts.js"></script> 
@@ -17,29 +18,76 @@
 </head>
 <body>
 <div class="page-wrapper">
-	<header class="headerTop">
-		<div class="header-content-wrapper">
-		<div class="logo">
-			<h1 class="top">Dance<span class="LogoIt">Love</span></h1>
-		</div>
-            <nav class="nav">
-                <a href="#"><div id="itemsReg">Zapisz się!</div></a>      
-                <a href="#"><div class="items">Opinie</div></a>
-                <a href="o-nas.html"><div class="items">O nas</div></a>
-                <a href="#"><div class="items">Kontakt</div></a>
-                <a href="index.html"><div class="items">Nasze szkolenie</div></a>
+	<header class="header">
+		<div class="container">
+			<div class="logo">
+				<a class="logo__dance" href="#">Dance<span class="logo__love">Love</span></a>
+			</div> 
+       <nav class="nav">  
+              
+                <a class="items" href="#">Opinie</a>
+                <a class="items" href="o-nas.html">O nas</a>
+                <a class="items" href="#">Kontakt</a>
+				<a class="items" href="index.html">Nasze szkolenie</a>
+				<a class="itemsReg" href="#">Zapisz się!</a> 
+      
 			</nav>
 		</div>
 	</header>
-	
-		<main>
-			<article class="article">
-				<div id="content">
-					<h1 class="mainHeader">Nauczymy Cię tańczyć!</h1>
+	<main class="main">
+		<!-- <div class="background"> -->
+		<div class="background-container">
+			<h2>Nauczymy Cię tańczyć!</h2>
+			<span>Zobacz sam</span>
+			<a></a>
+		</div>
+		<!-- </div> -->
+
+			<section class="section">
+				<div class="container description">
+					<!-- Need for heading -->
+					<!-- <h2></h2> -->
+					<ul>
+						<li><span>Należysz do tych osób, które nie potrafią poruszać się na parkiecie?</span></li>
+						<li><span>Nie czujesz się pewnie? Zazwyczaj opierasz ściany w klubach?</span></li>
+						<li><span>Wykonujesz jakieś ruchy, ale nie za bardzo wiadomo o co ci chodzi?</span></li>
+					</ul>
+					<p>Niebawem może to być już tylko <span class="distinct-word">przeszłość</span>! Wybierając nasze szkolenie przeprowadzimy cię od podstaw do zaawansowanych technik tanecznych i to w zaledwie dwa tygodnie. A  możliwość nauki tańca z jedną z naszych profesjonalych tańcerek lub tańcerzy sprawi, że twoja pewność siebie w klubach lub na urodzinach twojej babci wzrośnie w niezwykle szybkim tempie!</p>
+				</div>
+			</section>
+			<section class="section">
+				<div class="container skills">
+					<h2 class="dance-text">Co będziesz potrafił po naszym szkoleniu?</h2>
+					<ul>
+						<li><span>Partnerowania - efektownych obrotów, podnoszeń oraz wychyleń, żeby twój taniec był ciekawy i oryginalny.</span></li> 
+						<li><span>Tańca solo - abyś poruszał się płynnie i swobodnie, aby już nigdy nie zastanawiać się co powinieneś robić.</span></li> 
+						<li><span>Tańca zmysłowego - kiedy w grę wchodzi spokojna muzyka i nie wykonujecie żadnych dynamicznych ruchów.</span></li>
+						<li><span>Nauczysz się wyczucia rytmu, dzięki czemu twoje ruchy będą zawsze dopasowane do utworu.</span></li> 
+					</ul>
+					<div class="img-dancing-people"></div>
+				</div>
+			</section>
+			<section class="section">
+				<div class="container moreover">
+					<h2 class="dance-text">Ale to nie wszystko!</h2>
+					<ul>
+						<li><span>Popracujemy nad twoją atrakcyjnością i pewnością siebie, dzięki wiedzy psychologicznej, odpowiedniej mowie ciała i pozytywnej energii!</span></li> 
+						<li><span>Pokażemy ci jakie są sygnały zainteresowania i jak na nie reagować.</span></li> 
+						<li><span>Najlepsze sposoby na rozpoczęcie tańca z nową poznaną osobą.</span></li>
+						<li><span>I wiele więcej!</span></li>
+					</ul>
+					<div class="contentButton">
+						<form action="#">
+							<button class="btn orangebutton">Naucz się tańczyć!</button>
+						</form>
+					</div>
+				</div>
+			</section>
+					<!--<h1 class="mainHeader">Nauczymy Cię tańczyć!</h1>
 							<p class="info"> Należysz do tych osób, które nie potrafią poruszać się na parkiecie? Nie czujesz się pewnie? Zazwyczaj opierasz ściany w klubach? Wykonujesz jakieś ruchy, ale nie za bardzo wiadomo o co ci chodzi? Niebawem może to być już tylko <strong>przeszłość!</strong> Wybierając nasze szkolenie przeprowadzimy cię od podstaw do zaawansowanych technik tanecznych i to w zaledwie dwa tygodnie. A  możliwość nauki tańca z jedną z naszych profesjonalych tańcerek lub tańcerzy sprawi, że twoja pewność siebie w klubach lub na urodzinach twojej babci wzrośnie w niezwykle szybkim tempie!     
 							</p>
                     
-                    <h2 class="danceText">Co będziesz potrafił po naszym szkoleniu?</h2> 
+                     <h2 class="danceText">Co będziesz potrafił po naszym szkoleniu?</h2> 
 
                         <ul>
                             <li>Partnerowania - efektownych obrotów, podnoszeń oraz wychyleń, żeby twój taniec był ciekawy i oryginalny.</li> 
@@ -61,15 +109,14 @@
                                 <form action="#">
                                     <button class="btn orangebutton">Naucz się tańczyć!</button>
                                 </form>
-							</div>
-				</div>
-			</article>
+							</div> -->
+			
 			
 		</main>
 	
-	<footer>
+	<footer class="footer">
 		
-		<div class="bottom">
+		<div class="container">
 			Wszelkie prawa zastrzeżone © 2020 - DanceLove
 		</div>
 		
