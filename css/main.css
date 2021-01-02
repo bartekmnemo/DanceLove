@@ -397,7 +397,7 @@ img
 {
 	font-size:12px;
     display: flex;
-    width: 60%;
+    width: 50%;
 	margin:auto;
     padding: 1em;
 	color: #000;
@@ -478,7 +478,7 @@ label
 
 .charCont
 {
-	margin-left:50px;
+	margin-left:10em;
 }
 
 /* 
