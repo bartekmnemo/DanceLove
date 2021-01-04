@@ -383,10 +383,103 @@ img
 	text-align: center;
     font-size: 28px;
     font-weight: bold;
-    background-color: #D1D1D1;
+    background-color: #272727;
     color: #FFF;
 }
 
+.info
+{
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.contentCont
+{
+	font-size:12px;
+    display: flex;
+    width: 50%;
+	margin:auto;
+    padding: 1em;
+	color: #000;
+}
+
+.formTop
+{
+	text-align:center;
+	padding: 0.5em;
+    display: block;
+    background-color: rgba(255,255,255,.21);
+    border-top: 2px solid rgba(14,48,107,.21);
+    border-left: 2px solid rgba(14,48,107,.21);
+    border-right: 2px solid rgba(14,48,107,.21);
+    border-bottom: 2px solid rgba(14,48,107,.21);
+}
+
+form
+{
+	text-align:left;
+}
+
+.formMid
+{
+	text-align:center;
+}
+
+.formMid input
+{
+	padding:0;
+	margin:0;
+	width:auto;
+}
+
+.formBot
+{
+	text-align:center;
+}
+
+input
+{
+width: 90%;
+margin:10px;
+padding:0.5em;
+border: 2px solid #ddd;
+}
+
+
+textarea
+{
+width: 90%;
+margin:10px;
+padding:0.5em;
+height:5em;
+border: 2px solid #ddd;
+}
+
+.slij
+{
+	height:35px;
+	width:50%;
+	padding:10px;
+	margin:10px;
+	background-color: #ffa500;
+	color: #fff;
+}
+
+label
+{
+	padding:10px;
+}
+
+.formHeader
+{
+	font-size:24px;
+	padding:20px;
+}
+
+.charCont
+{
+	margin-left:10em;
+}
 
 /* 
 ul li
