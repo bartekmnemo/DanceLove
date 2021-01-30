@@ -296,3 +296,70 @@ ul li::before
 {
     background-position:-100%; 
 }
+#form 
+{
+	margin:0 auto;
+	padding:50px;
+	margin-left:160px;
+}
+
+.shadow {
+	margin: 100px;
+	margin-top: 170px;
+	margin-left: 350px;
+	margin-right: 350px;
+	background-color: ccc;
+
+	-moz-box-shadow: -35px 5px 45px rgba(0,0,0,75);
+	-webkit-box-shadow: - 5px 45px rgba(0,0,0,75);
+	box-shadow: -25px 5px 45px rgba(0,0,0,75);
+}
+input[type=text],
+input[type=mail],
+input[type=number]
+{
+width: 300px;
+background-color: #efefef;
+color: #666;
+border: 5x solid #ddd;
+border-radius: 5px;
+font-size: 10px;
+padding: 10px;
+box-sizing: border-box; 
+
+}
+input[type=submit]
+{
+	width: 300px;
+	background-color: #FFA500;
+	border: 5x solid #ddd;
+	border-radius: 1em;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 10px;
+	box-sizing: border-box; 
+	cursor: pointer; 
+	letter-spacing: 2px;
+	border: 1px solid #ffa500;
+	
+}
+input[type=submit]:hover
+{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+#term 
+{
+	font-size: 25px;
+
+}
+#pods 
+{
+	font-size: 20px;
+	color: #000000;
+	padding: 15px;
+	margin-right: 150px;
+	margin-left:150px;
+	
+}
+
