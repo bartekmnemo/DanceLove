@@ -13,9 +13,24 @@ body {
 
 /* --- margins, paddings, decorations for headings, etc --- */
 
-h1, h2, h3 {
+*,
+h1,
+h2,
+h3,
+p {
     margin: 0;
-	padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    position: relative;
+    min-height: 100vh;
+    background-color: #F3F3F3;
+}
+
+.content-wrap{
+    padding-bottom: 2.5em;
 }
 
 a
@@ -29,20 +44,27 @@ a
 	position: fixed;
     top: 0;
     left: 0;
-	width: 100%;
+    width: 100%;
+    height: calc(60px + 1em);
 	background-color: white;
     box-shadow: 0 0 2em -1em rgba(0,0,0,0.75);
     z-index: 10;
-    
+
 }
 
 .header > .container {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    max-width: 63.25em;
     padding: 1em;
     margin: auto;
-    box-sizing: border-box;
+}
+
+@media screen and (max-width: 63.25em) {
+    .header > .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 
 .logo {
@@ -66,11 +88,12 @@ span.logo__love {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1em;
+    padding: 0 .5em;
     text-align: center;
 }
 
 .items {
+    margin: 0 0.5em;
     font-weight: bold;
     color:#3f3f3f;
     padding: 10px 0.5em 10px 0.5em;
@@ -104,8 +127,9 @@ span.logo__love {
 }
 
 .dance-text {
+    margin: auto;
+    max-width: 30ch;
     font-size: 36px;
-    box-sizing: border-box;
     cursor: pointer;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -127,38 +151,43 @@ span.logo__love {
 
 .main {
     font-family: 'Roboto Condensed', sans-serif;
-    margin-top: calc(50px + 1.5em);
+    margin-top: calc(60px + 1em);
     background-color: #F3F3F3;
 }
-/* 
-.background {
-    width: 100%;
-    height: 80vh;
-} */
-.background-container {
-    height: 90vh;
-    box-sizing: border-box;
+
+.background-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    gap: 1em;
-    padding-bottom: 4em;
+    /* padding-bottom: 6em; */
+    text-align: center;
 
+}
+
+.background-container {
+    min-height: calc(100vh - 60px - 1em);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
     background-image: url(../img/backgrounds/gosciu.png);
+
+    background-image: linear-gradient(to right,rgba(45, 18, 82, .8), rgba(255, 132, 16, .8)), url(../img/backgrounds/gosciu.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-y: -5em;
     color: #FFF;
 
 }
 
 .background-container h2{
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
-    /* font-family: 'Open Sans Condensed', serif; */
+    line-height: 1.25;
 }
 
 .background-container span {
@@ -166,37 +195,120 @@ span.logo__love {
     font-size: 2em;
     font-weight: normal;
     font-family: 'Open Sans Condensed', serif;
+    line-height: 1.5;
+    margin-bottom: 1em;
 }
 
+/* scrollbar - circle */
+
 .background-container a {
-    display: block;
+    position: relative;
     width: 3em;
     height: 3em;
-    background-image: url(../img/icons/iconmonstr-arrow-69-48.png);
+    background-color: transparent;
+    border: 1.5px solid white;
+    border-radius: 50%;
     cursor: pointer;
+    
+}
+
+/* scrollbar - lines */
+
+.background-container a::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    transform: rotate(-45deg);
+    margin: -12px 0 0 -8.4px;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    transition: 0.5s;
+    
+}
+
+.background-container a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 3em;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    opacity: 0;
+    animation: circle 3s infinite;
+    z-index: 0;
+}
+
+@keyframes circle {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.background-container a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: 0.5s;
 }
 
 .section {
-    padding: 100px 0;
-    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    text-align: center;
     background-color: #F3F3F3;
 }
+
+
+
+.main-section, .contact-section, .zapis-section {
+    padding: 6em 0;
+}
+
 
 .section:nth-child(odd){
     background-color: #FFF;
 }
 
-.section > .container {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    /* padding: 0 50px; */
+
+.section-shattered, .shattered {
+    background-image: url(../img/shattered/shattered_@2X.png);
+    background-size: cover;
 }
 
-.section > h2 {
-    text-align: center;
-    color: #3f3f3f;
-    font-size: 24px;
+
+.section > .container {
+    width: 100%;
+    max-width: 63.25em;
+    margin: auto;
+}
+
+@media screen and (max-width: 63.25em) {
+    .section {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .section > .container {
+        /* width: 100%; */
+    }
 }
 
 .section ul {
@@ -205,16 +317,19 @@ span.logo__love {
     text-align: left;
 }
 
-.description li::before {
-    display: block;
-    position: relative;
-    top: 1.25em;
-    left: -1em;
-    content: "";
-    width: 0.5em;
-    height: 0.5em;
-    border-radius: 50%;
-    background-color: #FFA500;
+.section > h2 {
+    text-align: center;
+    color: #3f3f3f;
+    font-size: 24px;
+    
+    
+}
+
+.section li {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 2;
+    color: #515151;
 }
 
 .skills li::before, .moreover li::before {
@@ -228,22 +343,28 @@ span.logo__love {
     background-size: cover;
     width: 1em;
     height: 1em;
-}
+} 
 
-.section li {
+.section .description p {
+    display: inline-block;
+    max-width: 65ch;
     font-size: 1.5em;
-    font-weight: 700;
-    line-height: 2;
-    color: #515151;
+    line-height: 1.5;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    color: #676767;
     
 }
 
-.section p {
-    font-size: 1.5em;
-    font-weight: normal;
-    text-align: justify;
-    color: #676767;
-    font-family: 'Open Sans Condensed', sans-serif;
+.section .description ul {
+    margin-bottom: 3em;
+    
+}
+
+.section .description li {
+    margin-bottom: 1em;
+    
 }
 
 p span.distinct-word {
@@ -257,6 +378,10 @@ p span.distinct-word {
     color: #888;
 }
 
+.section .moreover {
+    text-align: center;
+}
+
 .img-dancing-people {
     width: 100%;
     height: 15em;
@@ -265,7 +390,6 @@ p span.distinct-word {
     background-repeat: no-repeat;
 
 }
-
 /* styles for o-nas.html */
 
 .orangeBelt
@@ -295,6 +419,7 @@ p span.distinct-word {
 }
 
 #contentAbout {
+    max-width: 30em;
 	text-align:center;
 	margin: auto;
 	font-size: 24px;
@@ -302,10 +427,10 @@ p span.distinct-word {
 	min-height: 500px;
 }
 
-img
+.img-contact
 {
-    border: 0.15em solid #ffa500;
-    border-radius: 4.3em;
+    border: 3px solid #ffa500;
+    border-radius: 50%;
     transition: 0.5s;
 }
 
@@ -318,6 +443,10 @@ img
     font-weight: bold;
     padding: 3em 0 0 0;
     margin: 1em;
+}
+
+.charDesc > * + * {
+    margin-bottom: 1em;
 }
 
 .contentButton {
@@ -341,6 +470,8 @@ img
 
 .orangebutton
 {
+    text-align: center;
+    margin: auto;
     position: relative;
     color: #fff;
     z-index: 10;
@@ -378,7 +509,7 @@ img
 }
 
 .footer {
-	
+    width: 100%;
 	padding: 1em;
 	text-align: center;
     font-size: 28px;
@@ -387,9 +518,11 @@ img
     color: #FFF;
 }
 
-.info
-{
-	font-size: 18px;
+
+.info {
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1.5;
+	font-size: 1em;
 	font-weight: 300;
 }
 
@@ -397,10 +530,15 @@ img
 {
 	font-size:12px;
     display: flex;
-    width: 50%;
-	margin:auto;
+	margin: auto;
     padding: 1em;
 	color: #000;
+}
+
+@media screen and (max-width: 63.25em) {
+    .contentCont {
+        flex-direction: column;
+    }
 }
 
 .formTop
@@ -409,10 +547,7 @@ img
 	padding: 0.5em;
     display: block;
     background-color: rgba(255,255,255,.21);
-    border-top: 2px solid rgba(14,48,107,.21);
-    border-left: 2px solid rgba(14,48,107,.21);
-    border-right: 2px solid rgba(14,48,107,.21);
-    border-bottom: 2px solid rgba(14,48,107,.21);
+    border: 2px solid rgba(14,48,107,.21);
 }
 
 form
@@ -437,38 +572,32 @@ form
 	text-align:center;
 }
 
-input
+.formTop input
 {
-width: 90%;
-margin:10px;
-padding:0.5em;
-border: 2px solid #ddd;
+    width: 90%;
+    margin:10px;
+    padding:0.5em;
+    border: 2px solid #ddd;
 }
 
 
 textarea
 {
-width: 90%;
-margin:10px;
-padding:0.5em;
-height:5em;
-border: 2px solid #ddd;
+    font-family: 'Arial', sans-serif;
+    width: 90%;
+    margin:10px;
+    padding:0.5em;
+    height:5em;
+    border: 2px solid #ddd;
 }
 
 .slij
-{
-	height:35px;
-	width:50%;
-	padding:10px;
-	margin:10px;
+{   
+	width: 50%;
 	background-color: #ffa500;
 	color: #fff;
 }
 
-label
-{
-	padding:10px;
-}
 
 .formHeader
 {
@@ -481,21 +610,16 @@ label
 	margin-left:10em;
 }
 
-/* 
-ul li
+@media screen and (max-width: 63.25em){
+    .charCont
 {
-    list-style: none;
+    margin-left: 0;
+    margin: auto;
 }
-
-ul li::before
-{
-    content: '✓ ';
-    color: #ffa500;
-} */
+}
 
 .danceText
 {
-    box-sizing: border-box;
     background: linear-gradient(to right, #3f3f3f 50%, #ff4000 50%, #ffa500);
     background-size: 200%;
     -webkit-background-clip: text;
@@ -506,9 +630,122 @@ ul li::before
     cursor: pointer;
 } 
 
-/* to chyba nic nie zmienia 
-.danceText:hover
+
+.shadow {
+    padding: 1em;
+	background-image: url(../img/shattered/shattered_@2X.png);
+
+	-moz-box-shadow: -35px 5px 45px rgba(0,0,0,75);
+	-webkit-box-shadow: -5px 45px rgba(0,0,0,75);
+	box-shadow: -25px 5px 45px rgba(0,0,0,75);
+}
+
+
+#wiki-form 
 {
-    background-position:-0%; 
-} 
-*/
+	padding: 50px;
+    margin-left: 160px;
+    
+}
+
+#wiki-form > * + * {
+    margin-bottom: 1em;
+}
+
+.wiki-input
+{
+    width: 300px;
+    background-color: #efefef;
+    color: #666;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 10px;
+    box-sizing: border-box; 
+
+}
+
+.wiki-submit
+{
+	width: 300px;
+	background-color: #FFA500;
+	border: 5px solid #ddd;
+	border-radius: 1em;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 10px;
+	box-sizing: border-box; 
+	cursor: pointer; 
+	letter-spacing: 2px;
+	border: 1px solid #ffa500;
+	
+}
+.wiki-submit:hover
+{
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+
+#term, #pods {
+    text-align: justify;
+}
+
+#term 
+{
+	font-size: 25px;
+}
+
+#term h3 {
+    margin-bottom: 1em;
+}
+
+#pods * + * {
+    margin-bottom: 1.2em;
+}
+
+#pods 
+{
+    
+	font-size: 20px;
+	color: #000000;
+	padding: 15px;
+	margin-right: 150px;
+	margin-left:150px;
+	
+}
+
+#pods * + * {
+    margin-bottom: 1.2em;
+}
+
+#pods h2 {
+   margin-bottom: 1.2em;
+ 
+}
+
+
+/* --- NASZE SZKOLENIE --- */
+
+.text-szkolenie, .title-szkolenie{
+    text-align: justify;
+}
+
+.title-szkolenie {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.container-szkolenie > * {
+    margin-bottom: 6em;
+}
+
+.container-szkolenie > * > *{
+    margin-bottom: 1em;
+}
+
+
+.img-szkolenie {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}

@@ -144,11 +144,11 @@ h1 {
 main {
 	margin-top: calc(50px + 1em);
 }
-
+/* 
 .article {
 	width: 55em;
 	margin: auto;
-}
+} */
 
 #content {
 	text-align: justify;
@@ -245,11 +245,11 @@ img
     font-weight: normal; 
 	margin-bottom: 60px;
 }
-
+/* 
 section {
 	background: white;
 	box-shadow: 0px 0px 50px -10px rgba(0,0,0,0.75);
-}
+} */
 
 .bottom {
 	color: #3f3f3f;
@@ -273,11 +273,6 @@ ul li
     list-style: none;
 }
 
-ul li::before
-{
-    content: '✓ ';
-    color: #ffa500;
-}
 
 .danceText
 {

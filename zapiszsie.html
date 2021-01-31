@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 	<title>DanceLove!</title>
-	
+
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="keywords" content="Projekt, WSB">
 	<meta name="author" content="Bartek Zięcina">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
-	
+
 	<link rel="stylesheet" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=latin-ext" rel="stylesheet">
-	
-	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=latin-ext"
+		rel="stylesheet">
+
+
 </head>
 
 <body>
-<div class="page-wrapper">
-	<header class="headerTop">
-		<div class="header-content-wrapper">
-		<div class="logo">
-			<h1 class="top">Dance<span class="LogoIt">Love</span></h1>
-		</div>
-            <nav class="nav">
-                <a href="#"><div id="itemsReg">Zapisz się!</div></a>      
-                <a href="#"><div class="items">Opinie</div></a>
-                <a href="o-nas.html"><div class="items">O nas</div></a>
-                <a href="#"><div class="items">Kontakt</div></a>
-                <a href="index.html"><div class="items">Nasze szkolenie</div></a>
-			</nav>
-		</div>
-	</header>
+	<div class="page-wrapper shattered">
+		<header class="header">
+			<div class="container">
+				<div class="logo">
+					<a class="logo__dance" href="index.html">Dance<span class="logo__love">Love</span></a>
+				</div>
+				<nav class="nav">
+                    
+					<a class="items" href="o-nas.html">O nas</a>
+					<a class="items" href="kontakt.html">Kontakt</a>
+					<a class="items" href="nasze-szkolenie.html">Nasze szkolenie</a>
+					<a class="itemsReg" href="podstrona1.html">Zapisz się!</a>
+				</nav>
+			</div>
+		</header>
+		<main class="main ">
+			<div class="orangeBelt">
+				<h1 class="headerText">Zapis</h1>
+			</div>
+			<section class="section section-shattered zapis-section">
+				<div class="container">
+					<div class="shadow">
+						<div id="wiki-form">
 
-<div class="shadow">
-<div id="form">
-
-<form action="formularz">
- <input type="text" placeholder="Imię" />
-<br><input type="text" placeholder="Nazwisko" /></br>
- <input type="number" placeholder="Numer telefonu"/>
-<br><input type="mail" placeholder="E-mail"/></br>
-<input type="checkbox" id="regulamin" name="regulamin">
-<label for="regulamin"> Oświadczam, że zapoznałem/am się z Regulaminem,<br> rozumiem jego postanowienia oraz je akceptuje</br> </label>
-</form>
-<br>
-<form action="podsumowanie.html" >  
-<input type="submit" value="Zapisz się!"></input>
-</form>
-</br>
-  </div>
-</div>
-
-
-
+							<form action="formularz">
+								<input class="wiki-input" type="text" placeholder="Imię" /><br>
+								<input class="wiki-input" type="text" placeholder="Nazwisko" /><br>
+								<input class="wiki-input" type="number" placeholder="Numer telefonu" /><br>
+								<input class="wiki-input" type="mail" placeholder="E-mail" /></br>
+								<input type="checkbox" id="regulamin" name="regulamin">
+								<label for="regulamin"> Oświadczam, że zapoznałem/am się z Regulaminem,<br> rozumiem
+									jego postanowienia oraz je akceptuje</br> </label>
+							</form>
+							<br>
+							<form action="podsumowanie.html">
+								<input class="wiki-submit" type="submit" value="Zapisz się!"></input>
+							</form>
+							</br>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 </body>
 </html>
